@@ -9,13 +9,21 @@ import CopyrightIcon from '@mui/icons-material/Copyright';
 
 
 const Footer = () => {
+    const [isValid, setIsValid] = useState(true);
 
   // // const [firstName, setFirstName] = useState("");
   // // const [lastName, setLastName] = useState("");
-  // // const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("");
   // // const [phNo, setPhNo] = useState("");
   // // const [message, setMessage] = useState("");
+const handleInputChange = (event) => {
+    const value = event.target.value;
+    setEmail(value);
 
+    // check if the value is a valid email
+    const emailRegex = /^\S+@\S+\.\S+$/;
+    setIsValid(emailRegex.test(value));
+  }
   // const InitialState = {
   //   firstName: "",
   //   lastName: "",
@@ -79,8 +87,8 @@ const Footer = () => {
             <input className='  outline-none bg-transparent border-b-[1px] border-b-gray-300 w-80 md:w-96' type='text' id='first_name' required maxLength={25} onChange={(e)=>setFirstName(e.target.value)}/>
             <label className=' text-gray-200' htmlFor='last_name'>LAST NAME</label>
             <input className='  outline-none bg-transparent border-b-[1px] border-b-gray-300 w-80 md:w-96' type='text' id='last_name' required maxLength={25} onChange={(e)=>setLastName(e.target.value)}/>
-            <label className=' text-gray-200' htmlFor='email'>EMAIL</label>
-            <input className='  outline-none bg-transparent border-b-[1px] border-b-gray-300 w-80 md:w-96' type='email' id='email' required onChange={(e)=>setEmail(e.target.value)}/>
+            <label className=' text-gray-200' htmlFor='email'  style={{ color: isValid ? 'white' : 'red' }}>EMAIL</label>
+            <input className='  outline-none bg-transparent border-b-[1px] border-b-gray-300 w-80 md:w-96' type='email' id='email' onChange={handleInputChange} style={{ borderColor: isValid ? 'white' : 'red' }} />
             <label className=' text-gray-200' htmlFor='mobile_no'>PHONE NUMBER</label>
             <input className='  outline-none bg-transparent border-b-[1px] border-b-gray-300 w-80 md:w-96' type='tel' id='mobile_no' required maxLength={12} onChange={(e)=>setPhNo(e.target.value)}/>
             <label className=' text-gray-200' htmlFor='message'>MESSAGE</label>
