@@ -90,7 +90,7 @@ const handleInputChange = (event) => {
             <label className=' text-gray-200' htmlFor='email'  style={{ color: isValid ? 'white' : 'red' }}>EMAIL</label>
             <input className='  outline-none bg-transparent border-b-[1px] border-b-gray-300 w-80 md:w-96' type='email' id='email' onChange={handleInputChange} style={{ borderColor: isValid ? 'white' : 'red' }} />
             <label className=' text-gray-200' htmlFor='mobile_no'>PHONE NUMBER</label>
-            <input className='  outline-none bg-transparent border-b-[1px] border-b-gray-300 w-80 md:w-96' type='tel' id='mobile_no' required maxLength={12} onChange={(e)=>setPhNo(e.target.value)}/>
+            <input className='  outline-none bg-transparent border-b-[1px] border-b-gray-300 w-80 md:w-96' type='number ' id='mobile_no' required maxLength={12} onChange={(e)=>setPhNo(e.target.value)}/>
             <label className=' text-gray-200' htmlFor='message'>MESSAGE</label>
             <input className=' pt-5 outline-none bg-transparent border-b-[1px] border-b-gray-300 w-80 md:w-96' type='text' id='message' required onChange={(e)=>setMessage(e.target.value)}/>
             <label htmlFor='submit' className='flex gap-3 bg-transparent cursor-pointer border-white border-[1px] mt-5 shadow-md shadow-violet-500 py-2 px-5 w-max rounded-full'>
@@ -119,7 +119,7 @@ const handleInputChange = (event) => {
           <hr className=' border-[1px] h-4'/>
           <Link to='service'>Data Protection</Link>
           <hr className=' border-[1px] h-4'/>
-          <Link to='/about'>Terms and Conditions</Link>
+          <Link to='/'>Terms and Conditions</Link>
           <hr className=' border-[1px] h-4'/>
           <Link to='/about'>Privacy Policy</Link>
           <hr className=' border-[1px] h-4'/>
