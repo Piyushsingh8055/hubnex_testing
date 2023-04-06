@@ -8,9 +8,9 @@ import SidebarData from './SidebarData';
 import { IconContext } from 'react-icons';
 
 function AdminNavbar() {
-  const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState(true);
 
-  const showSidebar = () => setSidebar(!sidebar);
+  const showSidebar = () => setSidebar(sidebar);
 
   return (
     <>
@@ -26,13 +26,14 @@ function AdminNavbar() {
               <Link to='#' className='menu-bars'>
                 {/* <AiIcons.AiOutlineClose /> */}
               </Link>
-                <Link  className=' flex gap-2 items-center'>
+                <p  className=' flex gap-2 items-center'>
             <img src={logo} alt='Logo' width={20} height={20}/>
             <span className=' text-white font-bold text-xl'>hubnex </span>
-          </Link>
+          </p>
           
             </li><br />
             <SidebarData/>
+             
               
           </ul>
         </nav>

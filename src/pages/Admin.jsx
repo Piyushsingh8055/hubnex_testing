@@ -1,22 +1,18 @@
-import React from 'react';
-import '../App.css';
-import AdminNavbar from '../components/admin/AdminNavbar';
+import React from 'react'
+import SideNav from '../components/adminpage/SideNav'
+import Header from '../components/adminpage/Header'
 
 
 
+const Admin = () => {
 
-function Admin() {
   return (
-    <>
-       <div>
-
-        <AdminNavbar />
-
-       </div>
+    <div className=' flex w-full h-screen bg-black'>
+        <SideNav/>
+        <Header/>
         
-     
-    </>
-  );
+    </div>
+  )
 }
 
-export default Admin;
+export default Admin

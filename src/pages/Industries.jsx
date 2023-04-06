@@ -13,7 +13,7 @@ const Industries = ()=>{
     <div className=' overflow-hidden'>
         <Hero/>
         <Cards/>
-        <Work/> 
+        <Work/>
         <Testimonial/>
         <Footer />
     </div>
