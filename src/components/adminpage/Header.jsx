@@ -21,7 +21,8 @@ const Header = () => {
         <div className=' w-full h-full justify-start flex gap-2 items-center'>
           <label className=' w-[50%] h-10 px-2 bg-gray-100 flex items-center gap-3 rounded-md'>
             <SearchIcon/>
-            <input className=' w-full outline-none border-none bg-transparent h-full'/>
+            <input className=' w-full outline-none border-none bg-transparent h-full' placeholder="Search"/>
+          
           </label>
           <button className=' bg-gray-100 h-10 w-10 rounded-md'><FilterAltIcon/></button>
         </div>
